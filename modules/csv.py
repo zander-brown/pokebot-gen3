@@ -34,7 +34,7 @@ def log_encounter_to_csv(total_stats: dict, pokemon_dict: dict, stats_dir_path: 
             .drop(
                 [
                     "EVs_attack",
-                    "EVs_defence",
+                    "EVs_defense",
                     "EVs_hp",
                     "EVs_spAttack",
                     "EVs_spDefense",

@@ -10,10 +10,10 @@
             "S": "FUERTE"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Lonely",
@@ -26,10 +26,10 @@
             "S": "HURA\u00d1A"
         },
         "attack_modifier": 1.1,
-        "defence_modifier": 0.9,
+        "defense_modifier": 0.9,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Brave",
@@ -42,10 +42,10 @@
             "S": "AUDAZ"
         },
         "attack_modifier": 1.1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 0.9,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Adamant",
@@ -58,10 +58,10 @@
             "S": "FIRME"
         },
         "attack_modifier": 1.1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 0.9,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Naughty",
@@ -74,10 +74,10 @@
             "S": "P\u00cdCARA"
         },
         "attack_modifier": 1.1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 0.9
+        "special_defense_modifier": 0.9
     },
     {
         "name": "Bold",
@@ -90,10 +90,10 @@
             "S": "OSADA"
         },
         "attack_modifier": 0.9,
-        "defence_modifier": 1.1,
+        "defense_modifier": 1.1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Docile",
@@ -106,10 +106,10 @@
             "S": "D\u00d3CIL"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Relaxed",
@@ -122,10 +122,10 @@
             "S": "PL\u00c1CIDA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1.1,
+        "defense_modifier": 1.1,
         "speed_modifier": 0.9,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Impish",
@@ -138,10 +138,10 @@
             "S": "AGITADA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1.1,
+        "defense_modifier": 1.1,
         "speed_modifier": 1,
         "special_attack_modifier": 0.9,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Lax",
@@ -154,10 +154,10 @@
             "S": "FLOJA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1.1,
+        "defense_modifier": 1.1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 0.9
+        "special_defense_modifier": 0.9
     },
     {
         "name": "Timid",
@@ -170,10 +170,10 @@
             "S": "MIEDOSA"
         },
         "attack_modifier": 0.9,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1.1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Hasty",
@@ -186,10 +186,10 @@
             "S": "ACTIVA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 0.9,
+        "defense_modifier": 0.9,
         "speed_modifier": 1.1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Serious",
@@ -202,10 +202,10 @@
             "S": "SERIA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Jolly",
@@ -218,10 +218,10 @@
             "S": "ALEGRE"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1.1,
         "special_attack_modifier": 0.9,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Naive",
@@ -234,10 +234,10 @@
             "S": "INGENUA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1.1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 0.9
+        "special_defense_modifier": 0.9
     },
     {
         "name": "Modest",
@@ -250,10 +250,10 @@
             "S": "MODESTA"
         },
         "attack_modifier": 0.9,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1.1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Mild",
@@ -266,10 +266,10 @@
             "S": "AFABLE"
         },
         "attack_modifier": 1,
-        "defence_modifier": 0.9,
+        "defense_modifier": 0.9,
         "speed_modifier": 1,
         "special_attack_modifier": 1.1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Quiet",
@@ -282,10 +282,10 @@
             "S": "MANSA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 0.9,
         "special_attack_modifier": 1.1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Bashful",
@@ -298,10 +298,10 @@
             "S": "T\u00cdMIDA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     },
     {
         "name": "Rash",
@@ -314,10 +314,10 @@
             "S": "ALOCADA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1.1,
-        "special_defence_modifier": 0.9
+        "special_defense_modifier": 0.9
     },
     {
         "name": "Calm",
@@ -330,10 +330,10 @@
             "S": "SERENA"
         },
         "attack_modifier": 0.9,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1.1
+        "special_defense_modifier": 1.1
     },
     {
         "name": "Gentle",
@@ -346,10 +346,10 @@
             "S": "AMABLE"
         },
         "attack_modifier": 1,
-        "defence_modifier": 0.9,
+        "defense_modifier": 0.9,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1.1
+        "special_defense_modifier": 1.1
     },
     {
         "name": "Sassy",
@@ -362,10 +362,10 @@
             "S": "GROSERA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 0.9,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1.1
+        "special_defense_modifier": 1.1
     },
     {
         "name": "Careful",
@@ -378,10 +378,10 @@
             "S": "CAUTA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 0.9,
-        "special_defence_modifier": 1.1
+        "special_defense_modifier": 1.1
     },
     {
         "name": "Quirky",
@@ -394,9 +394,9 @@
             "S": "RARA"
         },
         "attack_modifier": 1,
-        "defence_modifier": 1,
+        "defense_modifier": 1,
         "speed_modifier": 1,
         "special_attack_modifier": 1,
-        "special_defence_modifier": 1
+        "special_defense_modifier": 1
     }
 ]

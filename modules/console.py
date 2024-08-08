@@ -97,17 +97,17 @@ def print_stats(total_stats: dict, pokemon: Pokemon, session_pokemon: set) -> No
             iv_table = Table(title=f"{pokemon.species.name} IVs")
             iv_table.add_column("HP", justify="center", style=iv_colour(pokemon.ivs.hp))
             iv_table.add_column("ATK", justify="center", style=iv_colour(pokemon.ivs.attack))
-            iv_table.add_column("DEF", justify="center", style=iv_colour(pokemon.ivs.defence))
+            iv_table.add_column("DEF", justify="center", style=iv_colour(pokemon.ivs.defense))
             iv_table.add_column("SPATK", justify="center", style=iv_colour(pokemon.ivs.special_attack))
-            iv_table.add_column("SPDEF", justify="center", style=iv_colour(pokemon.ivs.special_defence))
+            iv_table.add_column("SPDEF", justify="center", style=iv_colour(pokemon.ivs.special_defense))
             iv_table.add_column("SPD", justify="center", style=iv_colour(pokemon.ivs.speed))
             iv_table.add_column("Total", justify="right", style=iv_sum_colour(pokemon.ivs.sum()))
             iv_table.add_row(
                 f"{pokemon.ivs.hp}",
                 f"{pokemon.ivs.attack}",
-                f"{pokemon.ivs.defence}",
+                f"{pokemon.ivs.defense}",
                 f"{pokemon.ivs.special_attack}",
-                f"{pokemon.ivs.special_defence}",
+                f"{pokemon.ivs.special_defense}",
                 f"{pokemon.ivs.speed}",
                 f"{pokemon.ivs.sum()}",
             )
@@ -116,9 +116,9 @@ def print_stats(total_stats: dict, pokemon: Pokemon, session_pokemon: set) -> No
             console.print(
                 f"IVs: HP: [{iv_colour(pokemon.ivs.hp)}]{pokemon.ivs.hp}[/] | "
                 f"ATK: [{iv_colour(pokemon.ivs.attack)}]{pokemon.ivs.attack}[/] | "
-                f"DEF: [{iv_colour(pokemon.ivs.defence)}]{pokemon.ivs.defence}[/] | "
+                f"DEF: [{iv_colour(pokemon.ivs.defense)}]{pokemon.ivs.defense}[/] | "
                 f"SPATK: [{iv_colour(pokemon.ivs.special_attack)}]{pokemon.ivs.special_attack}[/] | "
-                f"SPDEF: [{iv_colour(pokemon.ivs.special_defence)}]{pokemon.ivs.special_defence}[/] | "
+                f"SPDEF: [{iv_colour(pokemon.ivs.special_defense)}]{pokemon.ivs.special_defense}[/] | "
                 f"SPD: [{iv_colour(pokemon.ivs.speed)}]{pokemon.ivs.speed}[/] | "
                 f"Sum: [{iv_sum_colour(pokemon.ivs.sum())}]{pokemon.ivs.sum()}[/]"
             )

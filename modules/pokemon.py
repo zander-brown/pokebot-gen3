@@ -387,20 +387,20 @@ class StatsValues:
 
     hp: int
     attack: int
-    defence: int
+    defense: int
     speed: int
     special_attack: int
-    special_defence: int
+    special_defense: int
 
     @classmethod
     def from_dict(cls, data: dict) -> "StatsValues":
         return StatsValues(
             data.get("hp", 0),
             data.get("attack", 0),
-            data.get("defence", 0),
+            data.get("defense", 0),
             data.get("speed", 0),
             data.get("special_attack", 0),
-            data.get("special_defence", 0),
+            data.get("special_defense", 0),
         )
 
     def __getitem__(self, item):
@@ -430,23 +430,23 @@ class StatsValues:
             i: (((2 * species.base_stats[i] + ivs[i] + (evs[i] // 4)) * level) // 100 + 5) * nature.modifiers[i]
             for i in [
                 "attack",
-                "defence",
+                "defense",
                 "speed",
                 "special_attack",
-                "special_defence",
+                "special_defense",
             ]
         }
         return cls(
             hp=hp,
             attack=stats["attack"],
-            defence=stats["defence"],
+            defense=stats["defense"],
             speed=stats["speed"],
             special_attack=stats["special_attack"],
-            special_defence=stats["special_defence"],
+            special_defense=stats["special_defense"],
         )
 
     def sum(self) -> int:
-        return self.hp + self.attack + self.defence + self.speed + self.special_attack + self.special_defence
+        return self.hp + self.attack + self.defense + self.speed + self.special_attack + self.special_defense
 
 
 @dataclass
@@ -494,10 +494,10 @@ class Nature:
             name=data["name"],
             modifiers={
                 "attack": data["attack_modifier"],
-                "defence": data["defence_modifier"],
+                "defense": data["defense_modifier"],
                 "speed": data["speed_modifier"],
                 "special_attack": data["special_attack_modifier"],
-                "special_defence": data["special_defence_modifier"],
+                "special_defense": data["special_defense_modifier"],
             },
         )
 
@@ -867,10 +867,10 @@ class Pokemon:
         return StatsValues(
             hp=self._decrypted_data[56],
             attack=self._decrypted_data[57],
-            defence=self._decrypted_data[58],
+            defense=self._decrypted_data[58],
             speed=self._decrypted_data[59],
             special_attack=self._decrypted_data[60],
-            special_defence=self._decrypted_data[61],
+            special_defense=self._decrypted_data[61],
         )
 
     @property
@@ -879,10 +879,10 @@ class Pokemon:
         return StatsValues(
             hp=(packed_data >> 0) & 0b11111,
             attack=(packed_data >> 5) & 0b11111,
-            defence=(packed_data >> 10) & 0b11111,
+            defense=(packed_data >> 10) & 0b11111,
             speed=(packed_data >> 15) & 0b11111,
             special_attack=(packed_data >> 20) & 0b11111,
-            special_defence=(packed_data >> 25) & 0b11111,
+            special_defense=(packed_data >> 25) & 0b11111,
         )
 
     @property
@@ -991,10 +991,10 @@ class Pokemon:
             return StatsValues(
                 hp=unpack_uint16(self.data[88:90]),
                 attack=unpack_uint16(self.data[90:92]),
-                defence=unpack_uint16(self.data[92:94]),
+                defense=unpack_uint16(self.data[92:94]),
                 speed=unpack_uint16(self.data[94:96]),
                 special_attack=unpack_uint16(self.data[96:98]),
-                special_defence=unpack_uint16(self.data[98:100]),
+                special_defense=unpack_uint16(self.data[98:100]),
             )
 
     @property
@@ -1048,10 +1048,10 @@ class Pokemon:
         value = (
             ((ivs.hp & 1) << 0)
             + ((ivs.attack & 1) << 1)
-            + ((ivs.defence & 1) << 2)
+            + ((ivs.defense & 1) << 2)
             + ((ivs.speed & 1) << 3)
             + ((ivs.special_attack & 1) << 4)
-            + ((ivs.special_defence & 1) << 5)
+            + ((ivs.special_defense & 1) << 5)
         )
         value = (value * 15) // 63
         return get_type_by_name(HIDDEN_POWER_MAP[value])
@@ -1062,10 +1062,10 @@ class Pokemon:
         value = (
             ((ivs.hp & 2) >> 1)
             + ((ivs.attack & 2) << 0)
-            + ((ivs.defence & 2) << 1)
+            + ((ivs.defense & 2) << 1)
             + ((ivs.speed & 2) << 2)
             + ((ivs.special_attack & 2) << 3)
-            + ((ivs.special_defence & 2) << 4)
+            + ((ivs.special_defense & 2) << 4)
         )
         return (value * 40) // 63 + 30
 
@@ -1202,19 +1202,19 @@ class Pokemon:
         return {
             "EVs": {
                 "attack": self.evs.attack,
-                "defence": self.evs.defence,
+                "defense": self.evs.defense,
                 "hp": self.evs.hp,
                 "spAttack": self.evs.special_attack,
-                "spDefense": self.evs.special_defence,
+                "spDefense": self.evs.special_defense,
                 "speed": self.evs.speed,
             },
             "IVSum": self.ivs.sum(),
             "IVs": {
                 "attack": self.ivs.attack,
-                "defense": self.ivs.defence,
+                "defense": self.ivs.defense,
                 "hp": self.ivs.hp,
                 "spAttack": self.ivs.special_attack,
-                "spDefense": self.ivs.special_defence,
+                "spDefense": self.ivs.special_defense,
                 "speed": self.ivs.speed,
             },
             "ability": self.ability.name,
@@ -1267,11 +1267,11 @@ class Pokemon:
             "species": self.species.index,
             "stats": {
                 "attack": self.stats.attack,
-                "defense": self.stats.defence,
+                "defense": self.stats.defense,
                 "hp": self.current_hp,
                 "maxHP": self.total_hp,
                 "spAttack": self.stats.special_attack,
-                "spDefense": self.stats.special_defence,
+                "spDefense": self.stats.special_defense,
                 "speed": self.stats.speed,
             },
             "status": {

@@ -46,10 +46,10 @@ class Roamer:
         return StatsValues(
             hp=(packed_data >> 0) & 0b11111,
             attack=(packed_data >> 5) & 0b11111,
-            defence=(packed_data >> 10) & 0b11111,
+            defense=(packed_data >> 10) & 0b11111,
             speed=(packed_data >> 15) & 0b11111,
             special_attack=(packed_data >> 20) & 0b11111,
-            special_defence=(packed_data >> 25) & 0b11111,
+            special_defense=(packed_data >> 25) & 0b11111,
         )
 
     @property
@@ -116,10 +116,10 @@ class Roamer:
         value = (
             ((ivs.hp & 1) << 0)
             + ((ivs.attack & 1) << 1)
-            + ((ivs.defence & 1) << 2)
+            + ((ivs.defense & 1) << 2)
             + ((ivs.speed & 1) << 3)
             + ((ivs.special_attack & 1) << 4)
-            + ((ivs.special_defence & 1) << 5)
+            + ((ivs.special_defense & 1) << 5)
         )
         value = (value * 15) // 63
         return get_type_by_name(HIDDEN_POWER_MAP[value])
@@ -130,10 +130,10 @@ class Roamer:
         value = (
             ((ivs.hp & 2) >> 1)
             + ((ivs.attack & 2) << 0)
-            + ((ivs.defence & 2) << 1)
+            + ((ivs.defense & 2) << 1)
             + ((ivs.speed & 2) << 2)
             + ((ivs.special_attack & 2) << 3)
-            + ((ivs.special_defence & 2) << 4)
+            + ((ivs.special_defense & 2) << 4)
         )
         return (value * 40) // 63 + 30
 

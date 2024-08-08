@@ -34,10 +34,10 @@ type ItemPocket = "Items" | "PokeBalls" | "TmsAndHms" | "Berries" | "KeyItems";
 type StatsValues = {
     hp: number;
     attack: number;
-    defence: number;
+    defense: number;
     speed: number;
     special_attack: number;
-    special_defence: number;
+    special_defense: number;
 };
 
 export type Type = {
@@ -145,10 +145,10 @@ export type Nature = {
     // modifier) and the rest will be `1`.
     modifiers: {
         attack: number;
-        defence: number;
+        defense: number;
         speed: number;
         special_attack: number;
-        special_defence: number;
+        special_defense: number;
     };
 };
 

@@ -42,9 +42,9 @@ def custom_hooks(hook) -> None:
                     "╠═══╪═══╪═══╪═══╪═══╪═══╣\n"
                     f"║{pokemon.ivs.hp:^3}│"
                     f"{pokemon.ivs.attack:^3}│"
-                    f"{pokemon.ivs.defence:^3}│"
+                    f"{pokemon.ivs.defense:^3}│"
                     f"{pokemon.ivs.special_attack:^3}│"
-                    f"{pokemon.ivs.special_defence:^3}│"
+                    f"{pokemon.ivs.special_defense:^3}│"
                     f"{pokemon.ivs.speed:^3}║\n"
                     "╚═══╧═══╧═══╧═══╧═══╧═══╝"
                     "```"
@@ -54,9 +54,9 @@ def custom_hooks(hook) -> None:
                 iv_field = (
                     f"HP: {pokemon.ivs.hp} | "
                     f"ATK: {pokemon.ivs.attack} | "
-                    f"DEF: {pokemon.ivs.defence} | "
+                    f"DEF: {pokemon.ivs.defense} | "
                     f"SPATK: {pokemon.ivs.special_attack} | "
-                    f"SPDEF: {pokemon.ivs.special_defence} | "
+                    f"SPDEF: {pokemon.ivs.special_defense} | "
                     f"SPE: {pokemon.ivs.speed}"
                 )
             return iv_field

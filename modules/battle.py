@@ -754,26 +754,6 @@ class BattleOpponent:
                                 return i
                 if show_messages:
                     context.message = "No Pokémon seem to be fit to fight."
-            case "lowest_level":
-                lowest_level_index = None
-                lowest_level = float("inf")
-                for i in range(len(self.party)):
-                    pokemon = self.party[i]
-                    if pokemon == self.current_battler or pokemon.is_egg or not mon_has_enough_hp(pokemon):
-                        continue
-                    if pokemon.level < lowest_level and any(move_is_usable(move) for move in pokemon.moves):
-                        lowest_level = pokemon.level
-                        lowest_level_index = i
-                if lowest_level_index is not None:
-                    if show_messages:
-                        pokemon = self.party[lowest_level_index]
-                        context.message = (
-                            f"Switching to {pokemon.name}, the lowest level Pokémon with enough HP and usable moves."
-                        )
-                    return lowest_level_index
-                else:
-                    if show_messages:
-                        context.message = "No suitable Pokémon found to switch."
 
     @staticmethod
     def is_valid_move(move: Move) -> bool:
@@ -805,9 +785,9 @@ class BattleOpponent:
         # Determine how each Pokémon's stats affect the damage
         match move.move.type.kind:
             case "Physical":
-                stat_calc = battler.stats.attack / target.stats.defence
+                stat_calc = battler.stats.attack / target.stats.defense
             case "Special":
-                stat_calc = battler.stats.special_attack / target.stats.special_defence
+                stat_calc = battler.stats.special_attack / target.stats.special_defense
             case _:
                 return 0
         return power * stat_calc

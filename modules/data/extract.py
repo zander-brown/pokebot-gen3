@@ -279,7 +279,7 @@ def extract_natures(english_rom: ROM, localised_roms: dict[str, ROM]) -> list[di
         english_file.seek(get_address("gNatureStatTable"))
         for i in range(25):
             modifiers = english_file.read(5)
-            stats_list = ["attack", "defence", "speed", "special_attack", "special_defence"]
+            stats_list = ["attack", "defense", "speed", "special_attack", "special_defense"]
             for j in range(len(stats_list)):
                 key = f"{stats_list[j]}_modifier"
                 if modifiers[j] == 0:
@@ -658,10 +658,10 @@ def extract_species(
                     "base_stats": {
                         "hp": info[0],
                         "attack": info[1],
-                        "defence": info[2],
+                        "defense": info[2],
                         "speed": info[3],
                         "special_attack": info[4],
-                        "special_defence": info[5],
+                        "special_defense": info[5],
                     },
                     "gender_ratio": info[16],
                     "egg_cycles": info[17],
@@ -674,10 +674,10 @@ def extract_species(
                     "ev_yield": {
                         "hp": (info[10] & 0b00000011) >> 0,
                         "attack": (info[10] & 0b00001100) >> 2,
-                        "defence": (info[10] & 0b00110000) >> 4,
+                        "defense": (info[10] & 0b00110000) >> 4,
                         "speed": (info[10] & 0b11000000) >> 6,
                         "special_attack": (info[11] & 0b00000011) >> 0,
-                        "special_defence": (info[11] & 0b00001100) >> 2,
+                        "special_defense": (info[11] & 0b00001100) >> 2,
                     },
                     "localised_names": initialise_localised_string(),
                 }

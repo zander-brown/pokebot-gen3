@@ -25,8 +25,7 @@ class Battle(BaseConfig):
     faint_action: Literal["stop", "flee", "rotate"] = "flee"
     new_move: Literal["stop", "cancel", "learn_best"] = "stop"
     stop_evolution: bool = True
-    switch_strategy: Literal["first_available", "lowest_level"] = "first_available"
-    lead_mon_balance_levels: bool = False
+    switch_strategy: Literal["first_available"] = "first_available"
     banned_moves: list[str] = [
         "None",
         # 2-turn

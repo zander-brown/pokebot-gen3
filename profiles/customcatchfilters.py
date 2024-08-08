@@ -13,7 +13,7 @@ exceptions = [
     "Totodile",
     "Treecko",
     "Torchic",
-    "Mudkip",
+    # "Mudkip",
     "Kyogre",
     "Groudon",
     "Rayquaza",
@@ -46,7 +46,6 @@ exceptions = [
     "Hitmonchan",
 ]
 
-
 def custom_catch_filters(pokemon: Pokemon) -> str | bool:
     """
     See readme for documentation: https://github.com/40Cakes/pokebot-gen3/tree/main/wiki/pages/Configuration%20-%20Custom%20Catch%20Filters.md
@@ -68,10 +67,10 @@ def custom_catch_filters(pokemon: Pokemon) -> str | bool:
             ivs = [
                 pokemon.ivs.hp,
                 pokemon.ivs.attack,
-                pokemon.ivs.defence,
+                pokemon.ivs.defense,  # Ensure this matches the actual attribute name
                 pokemon.ivs.speed,
                 pokemon.ivs.special_attack,
-                pokemon.ivs.special_defence,
+                pokemon.ivs.special_defense,
             ]
 
             # Pokémon with 6 identical IVs of any value

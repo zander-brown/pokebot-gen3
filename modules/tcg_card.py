@@ -138,7 +138,6 @@ def generate_tcg_card(pokemon: Pokemon, location: str = "") -> Path | None:
             # Moves
             for i, move in enumerate(pokemon.moves):
                 if move:
-                    move_type_name = "Unknown" if move.move.type.name == "???" else move.move.type.name
                     move_name = "Unknown" if move.move.name == "???" else move.move.name
                     move_power = "-" if move.move.base_power == 0 else str(move.move.base_power)
                     if move_name == "Hidden Power":
@@ -163,7 +162,7 @@ def generate_tcg_card(pokemon: Pokemon, location: str = "") -> Path | None:
                         shadow_colour="#000",
                         anchor="rm",
                     )
-                    move_type = Image.open(get_sprites_path() / "types" / "swsh" / f"{move_type_name}.png")
+                    move_type = Image.open(get_sprites_path() / "types" / "swsh" / f"{move.move.type}.png")
                     if move.move.name == "Hidden Power":
                         move_type = Image.open(
                             get_sprites_path() / "types" / "swsh" / f"{pokemon.hidden_power_type}.png"
@@ -250,7 +249,7 @@ def generate_tcg_card(pokemon: Pokemon, location: str = "") -> Path | None:
             )
             draw = draw_text(
                 draw,
-                text=str(pokemon.ivs.defence),
+                text=str(pokemon.ivs.defense),
                 coords=(491, 274),
                 text_colour="#000",
                 shadow_colour="#DED7B5",
@@ -266,7 +265,7 @@ def generate_tcg_card(pokemon: Pokemon, location: str = "") -> Path | None:
             )
             draw = draw_text(
                 draw,
-                text=str(pokemon.ivs.special_defence),
+                text=str(pokemon.ivs.special_defense),
                 coords=(434, 297),
                 text_colour="#000",
                 shadow_colour="#DED7B5",
